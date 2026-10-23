@@ -7,6 +7,11 @@ services:
     dockerfilePath: ./Dockerfile
     dockerContext: .
     healthCheckPath: /
+    autoDeploy: true
     envVars:
       - key: PORT
         value: 8080
+      - key: R_LIBS_USER
+        value: /opt/R/library
+      - key: RENV_CONFIG_REPOS_OVERRIDE
+        value: https://cloud.r-project.org
