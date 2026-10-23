@@ -4,9 +4,6 @@
 .Rproj.user
 *.Rproj
 
-# Data (large files)
-data/*.csv
-
 # Screenshots (generated)
 screenshots/*.png
 
