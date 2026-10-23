@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: cybershield
+    env: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 8080

@@ -1485,4 +1485,7 @@ server <- function(input, output, session) {
   })
 }
 
-shinyApp(ui, server)
+# Read PORT from environment (for Render deployment)
+port <- as.integer(Sys.getenv("PORT", "8888"))
+
+shinyApp(ui, server, options = list(port = port, host = "0.0.0.0"))
